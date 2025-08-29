@@ -1,0 +1,6 @@
+@comment: just converted the straight-style flames of v0 to my current dot-heavy style
+
+    __ ' .
+. .' _:
+  '-_: .
+  _.x._

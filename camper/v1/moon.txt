@@ -1,0 +1,5 @@
+@comment: unexpectedly took a lot of work for the moon to have enough character that it was worth preserving to me
+
+,''           *       *       *               *
+|         *       *       *       *       *
+',,-          *               *       *       *

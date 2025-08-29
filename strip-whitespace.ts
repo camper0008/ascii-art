@@ -3,7 +3,7 @@ function shortestSpaceBeforeContent(lines: string[]): number {
         .map((x) => x.length)
         .reduce((acc, cur) => Math.max(acc, cur));
     for (const line of lines) {
-        if (line.trim() === "") {
+        if (line.trim() === "" || line.startsWith("@comment")) {
             continue;
         }
         const length = line.length - line.trimStart().length;
@@ -41,13 +41,17 @@ function stripEmptyLines(input: string[]): string[] {
     return output;
 }
 
+function trimLine(line: string, padding: number): string {
+    if (line.startsWith("@comment")) {
+        return line.trimEnd();
+    }
+    return line.slice(padding).trimEnd();
+}
+
 function stripWhitespace(input: string): string {
     const lines = input.split("\n");
     const padding = shortestSpaceBeforeContent(lines);
-    return stripEmptyLines(
-        lines
-            .map((x) => x.slice(padding).trimEnd()),
-    ).join("\n");
+    return stripEmptyLines(lines.map((x) => trimLine(x, padding))).join("\n");
 }
 
 for (const arg of Deno.args) {

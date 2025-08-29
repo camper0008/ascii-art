@@ -1,0 +1,7 @@
+@comment: inspired by a vintage converted fiat ducanto :-)
+
+  .---------------.
+ {_____  ___  ___ |
+  ,//_| |___| | |,|#
+."|__'| ==    | |'|8
+'-(@)-+----(@)+-+-'
