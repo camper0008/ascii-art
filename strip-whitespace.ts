@@ -12,12 +12,42 @@ function shortestSpaceBeforeContent(lines: string[]): number {
     return shortest;
 }
 
+function stripEmptyLines(input: string[]): string[] {
+    const output = [...input];
+    while (true) {
+        const line = output.pop();
+        if (line === undefined) {
+            break;
+        }
+        if (line.trim() === "") {
+            continue;
+        }
+        output.push(line);
+        break;
+    }
+    output.reverse();
+    while (true) {
+        const line = output.pop();
+        if (line === undefined) {
+            break;
+        }
+        if (line.trim() === "") {
+            continue;
+        }
+        output.push(line);
+        break;
+    }
+    output.reverse();
+    return output;
+}
+
 function stripWhitespace(input: string): string {
     const lines = input.split("\n");
     const padding = shortestSpaceBeforeContent(lines);
-    return lines
-        .map((x) => x.slice(padding).trimEnd())
-        .join("\n");
+    return stripEmptyLines(
+        lines
+            .map((x) => x.slice(padding).trimEnd()),
+    ).join("\n");
 }
 
 for (const arg of Deno.args) {
