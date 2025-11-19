@@ -1,0 +1,14 @@
+@comment: based on the vector graphic by SKOV A/S - made for my work account @ SKOV A/S, github.com/tph-skov-dk
+
+                                _-.
+       .-''---___            .-' /.
+     ."          ''"'''"''"''     |
+.O .'                           | '-.___
+'-_:                                 ' :
+   :                                _--'
+    '.                       _.----'
+      ':.  .----------..   .'
+       || |            \\  |
+       || |             || |
+       '| '._           :| '._
+        '__-"            '__-"
